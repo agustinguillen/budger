@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,500;1,900&display=swap");
+header {
+  background-color: #154360;
+  padding: 1em; }
+  header h1 {
+    color: #D6EAF8;
+    font-family: Montserrat;
+    font-size: 2em;
+    text-shadow: 3px 3px 2px black; }
+  header h4 {
+    color: #D6EAF8;
+    font-family: Montserrat;
+    font-style: italic;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px black; }
+
+body {
+  background-color: #D6EAF8;
+  height: 100%;
+  width: 100%; }
+  @media (min-width: 300px) {
+    body #cuerpo1 {
+      background: #2874a6;
+      background: linear-gradient(90deg, #2874a6 0%, #85c1e9 100%); }
+      body #cuerpo1 h3 {
+        padding: 1em;
+        padding-bottom: 0;
+        color: #D6EAF8;
+        font-family: Montserrat;
+        font-size: 1.2em; }
+      body #cuerpo1 #presupuestoActual {
+        color: #D6EAF8;
+        font-size: 2em;
+        font-family: Montserrat; }
+      body #cuerpo1 #tablero {
+        font-size: 1em;
+        padding: 1em;
+        margin-left: 3em;
+        margin-right: 3em; }
+        body #cuerpo1 #tablero #ingresos {
+          padding: 0;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline-block;
+          background-color: #2874A6;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+          body #cuerpo1 #tablero #ingresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero #egresos {
+          padding: 0;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline-block;
+          background-color: orangered;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+          body #cuerpo1 #tablero #egresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero .tituloSubtotales {
+          display: inline; }
+        body #cuerpo1 #tablero .subtotales {
+          display: inline;
+          margin: 1em;
+          margin-top: 0;
+          padding: 0;
+          color: #D6EAF8; } }
+  @media (min-width: 768px) {
+    body #cuerpo1 {
+      background: #2874a6;
+      background: linear-gradient(90deg, #2874a6 0%, #85c1e9 100%); }
+      body #cuerpo1 h3 {
+        padding: 1em;
+        padding-bottom: 0;
+        color: #D6EAF8;
+        font-family: Montserrat;
+        font-size: 1.2em; }
+      body #cuerpo1 #presupuestoActual {
+        color: #D6EAF8;
+        font-size: 2em;
+        font-family: Montserrat; }
+      body #cuerpo1 #tablero {
+        font-size: 1em;
+        padding: 2em;
+        margin-left: 10em;
+        margin-right: 10em; }
+        body #cuerpo1 #tablero #ingresos {
+          margin: 1em;
+          margin-top: 0;
+          padding: 0.3em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline;
+          background-color: #2874A6; }
+          body #cuerpo1 #tablero #ingresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero #egresos {
+          margin: 1em;
+          margin-top: 0;
+          padding: 0.3em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline;
+          background-color: orangered; }
+          body #cuerpo1 #tablero #egresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero .tituloSubtotales {
+          display: inline; }
+        body #cuerpo1 #tablero .subtotales {
+          display: inline;
+          margin: 1em;
+          margin-top: 0;
+          padding: 0;
+          color: #D6EAF8; } }
+  @media (min-width: 992px) {
+    body #cuerpo1 {
+      background: #2874a6;
+      background: linear-gradient(90deg, #2874a6 0%, #85c1e9 100%); }
+      body #cuerpo1 h3 {
+        padding: 0.5em;
+        padding-bottom: 0;
+        color: #D6EAF8;
+        font-family: Montserrat;
+        font-size: 1.2em; }
+      body #cuerpo1 #presupuestoActual {
+        color: #D6EAF8;
+        font-size: 2em;
+        font-family: Montserrat;
+        margin-bottom: 0;
+        padding: 0; }
+      body #cuerpo1 #tablero {
+        font-size: 1em;
+        padding: 2em;
+        margin-left: 20em;
+        margin-right: 20em;
+        height: 14em; }
+        body #cuerpo1 #tablero #ingresos {
+          overflow: hidden;
+          margin: 1em;
+          width: 45em;
+          height: 5em;
+          margin-top: 0;
+          padding: 0.5em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline-block;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          background-color: #2874A6; }
+          body #cuerpo1 #tablero #ingresos .montoSubtotales {
+            display: block;
+            margin: 0;
+            padding: 0; }
+          body #cuerpo1 #tablero #ingresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero #egresos {
+          overflow: hidden;
+          margin: 1em;
+          width: 45em;
+          height: 5em;
+          margin-top: 0;
+          padding: 0.5em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline-block;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          background-color: orangered; }
+          body #cuerpo1 #tablero #egresos .montoSubtotales {
+            display: block;
+            margin: 0;
+            padding: 0; }
+          body #cuerpo1 #tablero #egresos small {
+            font-weight: lighter;
+            font-size: 0.8em;
+            float: right;
+            margin-right: 1em; }
+        body #cuerpo1 #tablero .tituloSubtotales {
+          display: inline;
+          margin: 1em; }
+        body #cuerpo1 #tablero .subtotales {
+          display: inline-block;
+          margin: 7em;
+          margin-top: 0;
+          padding: 0;
+          color: #D6EAF8; } }
+  @media (min-width: 1200px) {
+    body #cuerpo1 {
+      background: #2874a6;
+      background: linear-gradient(90deg, #2874a6 0%, #85c1e9 100%); }
+      body #cuerpo1 h3 {
+        padding: 1em;
+        padding-bottom: 0;
+        color: #D6EAF8;
+        font-family: Montserrat;
+        font-size: 1.2em; }
+      body #cuerpo1 #presupuestoActual {
+        color: #D6EAF8;
+        font-size: 2em;
+        font-family: Montserrat; }
+      body #cuerpo1 #tablero {
+        font-size: 1em;
+        padding: 2em;
+        margin-left: 23em;
+        margin-right: 23em; }
+        body #cuerpo1 #tablero #ingresos {
+          margin: 1em;
+          margin-top: 0;
+          padding: 0.3em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline;
+          background-color: #2874A6; }
+          body #cuerpo1 #tablero #ingresos small {
+            font-weight: lighter;
+            font-size: 0.8em; }
+        body #cuerpo1 #tablero #egresos {
+          margin: 1em;
+          margin-top: 0;
+          padding: 0.3em;
+          color: #D6EAF8;
+          font-weight: bold;
+          border: solid 1px #D6EAF8;
+          border-radius: 15px;
+          display: inline;
+          background-color: orangered; }
+          body #cuerpo1 #tablero #egresos small {
+            font-weight: lighter;
+            font-size: 0.8em; }
+        body #cuerpo1 #tablero .tituloSubtotales {
+          display: inline; }
+        body #cuerpo1 #tablero .subtotales {
+          display: inline;
+          margin: 1em;
+          margin-top: 0;
+          padding: 0;
+          color: #D6EAF8; } }
+
+@media (max-width: 767.98px) and (min-width: 300px) {
+  body #cuerpo2 #agregarNuevo {
+    background-color: #154360;
+    color: #D6EAF8;
+    width: 100%; }
+    body #cuerpo2 #agregarNuevo .formulario {
+      margin: 0;
+      padding-top: 1em;
+      padding-bottom: 1em; }
+      body #cuerpo2 #agregarNuevo .formulario .form-control {
+        display: inline; }
+      body #cuerpo2 #agregarNuevo .formulario label {
+        margin: 0 1% 0 3%; }
+      body #cuerpo2 #agregarNuevo .formulario input {
+        height: 2.5em;
+        width: 1em;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo .formulario #descripcion {
+        width: 12em;
+        margin: 5px; }
+      body #cuerpo2 #agregarNuevo .formulario #monto {
+        width: 7em;
+        margin: 5px; }
+      body #cuerpo2 #agregarNuevo .formulario .selector {
+        width: 10em;
+        display: inline;
+        border-radius: 10px;
+        margin: 5px; }
+      body #cuerpo2 #agregarNuevo .formulario #cargar {
+        margin-left: 2em;
+        height: 2.7em; }
+      body #cuerpo2 #agregarNuevo .formulario .salto {
+        display: inline-block; }
+  body #cuerpo2 .informacion {
+    margin: 0;
+    padding: 0; }
+    body #cuerpo2 .informacion #listaIngresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaIngresos .datoIngreso {
+        color: #2874A6;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato {
+          width: 40vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-left: 0;
+          border: 1px solid #2874A6;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
+    body #cuerpo2 .informacion #listaEgresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaEgresos .datoEgreso {
+        color: orangered;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
+          width: 40vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-right: 0;
+          border: 1px solid orangered;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
+  body #cuerpo2 #tituloIngresos {
+    padding: 1em;
+    color: #2874A6; }
+  body #cuerpo2 #tituloEgresos {
+    padding: 1em;
+    color: orangered; } }
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+  body #cuerpo2 #agregarNuevo {
+    background-color: #154360;
+    color: #D6EAF8;
+    width: 100%; }
+    body #cuerpo2 #agregarNuevo form {
+      margin: 1em;
+      padding: 0; }
+      body #cuerpo2 #agregarNuevo form .form-control {
+        display: inline;
+        margin: 0.5em; }
+      body #cuerpo2 #agregarNuevo form label {
+        margin: 0 1% 0 3%; }
+      body #cuerpo2 #agregarNuevo form input {
+        height: 2.5em;
+        width: 1em;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form #descripcion {
+        width: 25em; }
+      body #cuerpo2 #agregarNuevo form #monto {
+        width: 7em; }
+      body #cuerpo2 #agregarNuevo form .selector {
+        width: 10%;
+        display: inline;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form .salto {
+        display: inline-block; }
+  body #cuerpo2 .informacion {
+    margin: 1em; }
+    body #cuerpo2 .informacion #listaIngresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaIngresos .datoIngreso {
+        color: #2874A6;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-left: 2vw;
+          border: 1px solid #2874A6;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
+    body #cuerpo2 .informacion #listaEgresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaEgresos .datoEgreso {
+        color: orangered;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-right: 2vw;
+          border: 1px solid orangered;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
+          color: #D6EAF8;
+          background-color: orangered;
+          box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+  body #cuerpo2 #tituloIngresos {
+    padding: 1em;
+    color: #2874A6; }
+  body #cuerpo2 #tituloEgresos {
+    padding: 1em;
+    color: orangered; } }
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  body #cuerpo2 #agregarNuevo {
+    background-color: #154360;
+    color: #D6EAF8;
+    width: 100%; }
+    body #cuerpo2 #agregarNuevo form {
+      margin: 0;
+      padding: 1em; }
+      body #cuerpo2 #agregarNuevo form .form-control {
+        display: inline; }
+      body #cuerpo2 #agregarNuevo form label {
+        margin: 0 1% 0 3%; }
+      body #cuerpo2 #agregarNuevo form input {
+        height: 2.5em;
+        width: 1em;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form #descripcion {
+        width: 25em; }
+      body #cuerpo2 #agregarNuevo form #monto {
+        width: 7em; }
+      body #cuerpo2 #agregarNuevo form .selector {
+        width: 10%;
+        display: inline;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form br {
+        display: none; }
+  body #cuerpo2 .informacion {
+    margin: 1em; }
+    body #cuerpo2 .informacion #listaIngresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaIngresos .datoIngreso {
+        color: #2874A6;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-left: 2vw;
+          border: 1px solid #2874A6;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
+          color: #D6EAF8;
+          background-color: #2874A6;
+          box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .informacion #listaEgresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaEgresos .datoEgreso {
+        color: orangered;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-right: 2vw;
+          border: 1px solid orangered;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
+          color: #D6EAF8;
+          background-color: orangered;
+          box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+  body #cuerpo2 #tituloIngresos {
+    padding: 1em;
+    color: #2874A6; }
+  body #cuerpo2 #tituloEgresos {
+    padding: 1em;
+    color: orangered; } }
+
+@media (min-width: 1200px) {
+  body #cuerpo2 #agregarNuevo {
+    background-color: #154360;
+    color: #D6EAF8;
+    width: 100%; }
+    body #cuerpo2 #agregarNuevo form {
+      margin: 0;
+      padding: 1em; }
+      body #cuerpo2 #agregarNuevo form .form-control {
+        display: inline; }
+      body #cuerpo2 #agregarNuevo form label {
+        margin: 0 1% 0 3%; }
+      body #cuerpo2 #agregarNuevo form input {
+        height: 2.5em;
+        width: 1em;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form #descripcion {
+        width: 25em; }
+      body #cuerpo2 #agregarNuevo form #monto {
+        width: 7em; }
+      body #cuerpo2 #agregarNuevo form .selector {
+        width: 10%;
+        display: inline;
+        border-radius: 10px; }
+      body #cuerpo2 #agregarNuevo form br {
+        display: none; }
+  body #cuerpo2 .informacion {
+    margin: 1em; }
+    body #cuerpo2 .informacion #listaIngresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaIngresos .datoIngreso {
+        color: #2874A6;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-left: 2vw;
+          border: 1px solid #2874A6;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
+        body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
+          color: #D6EAF8;
+          background-color: #2874A6;
+          box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .informacion #listaEgresos {
+      margin: 0;
+      padding: 0; }
+      body #cuerpo2 .informacion #listaEgresos .datoEgreso {
+        color: orangered;
+        list-style: none; }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
+          width: 45vw;
+          padding: 1em;
+          margin-bottom: 1em;
+          margin-right: 2vw;
+          border: 1px solid orangered;
+          border-radius: 2em;
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+        body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
+          color: #D6EAF8;
+          background-color: orangered;
+          box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+  body #cuerpo2 #tituloIngresos {
+    padding: 1em;
+    color: #2874A6; }
+  body #cuerpo2 #tituloEgresos {
+    padding: 1em;
+    color: orangered; } }

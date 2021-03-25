@@ -1,0 +1,438 @@
+body{
+    @media (max-width: 767.98px)and(min-width: 300px){
+        #cuerpo2{
+            #agregarNuevo{
+                background-color: $darkblue;
+                color: $xlightb;
+                width: 100%;
+                .formulario{
+                    margin: 0;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                        .form-control{
+                            display: inline;
+                        }
+                        label{
+                            margin: 0 1% 0 3%;
+                        }
+                        input{
+                            height: 2.5em;
+                            width: 1em;
+                            border-radius: 10px;
+                        }
+
+                        #descripcion{
+                            width: 12em;
+                            margin: 5px;
+                        }
+
+                        #monto{
+                            width: 7em;
+                            margin: 5px;
+                        }
+
+                        .selector{
+                            width: 10em;
+                            display: inline;
+                            border-radius: 10px;
+                            margin: 5px;
+                        }
+
+                        #cargar{
+                            margin-left: 2em;
+                            height: 2.7em;
+                        }
+
+                        .salto{
+                            display: inline-block;
+                        }
+                    
+                }
+            }
+
+            .informacion{
+                margin: 0;
+                padding: 0;
+                #listaIngresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoIngreso{
+                        color: $blue;
+                        list-style: none;
+                        .divDato{
+                            width: 40vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-left: 0;
+                            border: 1px solid $blue; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0.5em;
+                                right: 0.7em;
+                            }
+                        }
+                    }
+                }
+
+                #listaEgresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoEgreso{
+                        color: orangered;
+                        list-style: none;
+                        .divDato{
+                            width: 40vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-right: 0;
+                            border: 1px solid orangered; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0.5em;
+                                right: 0.7em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #tituloIngresos{
+                padding: 1em;
+                color: $blue;
+            }
+
+            #tituloEgresos{
+                padding: 1em;
+                color: orangered;
+            }
+        }
+    }
+
+    @media (max-width:991.98px)and(min-width: 768px){
+        #cuerpo2{
+            #agregarNuevo{
+                background-color: $darkblue;
+                color: $xlightb;
+                width: 100%;
+                form{
+                    margin: 1em;
+                    padding: 0;
+                        .form-control{
+                            display: inline;
+                            margin: 0.5em;
+                        }
+                        label{
+                            margin: 0 1% 0 3%;
+                        }
+                        input{
+                            height: 2.5em;
+                            width: 1em;
+                            border-radius: 10px;
+                        }
+
+                        #descripcion{
+                            width: 25em;
+                        }
+
+                        #monto{
+                            width: 7em;
+                        }
+
+                        .selector{
+                            width: 10%;
+                            display: inline;
+                            border-radius: 10px;
+                        }
+
+                        .salto{
+                            display: inline-block;
+                        }
+                    
+                }
+            }
+
+            .informacion{
+                margin: 1em;
+                #listaIngresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoIngreso{
+                        color: $blue;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-left: 2vw;
+                            border: 1px solid $blue; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                            img{
+                                position: absolute;
+                                top: 0.5em;
+                                right: 0.7em;
+                            }
+                        }
+                    }
+                }
+
+                #listaEgresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoEgreso{
+                        color: orangered;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-right: 2vw;
+                            border: 1px solid orangered; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                        }
+                        .divDato:hover{
+                            color: $xlightb;
+                            background-color: orangered;
+                            box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                        }
+                    }
+                }
+            }
+
+            #tituloIngresos{
+                padding: 1em;
+                color: $blue;
+            }
+
+            #tituloEgresos{
+                padding: 1em;
+                color: orangered;
+            }
+        }
+    }
+
+    @media (max-width:1199.98px)and(min-width: 992px){
+        #cuerpo2{
+            #agregarNuevo{
+                background-color: $darkblue;
+                color: $xlightb;
+                width: 100%;
+                form{
+                    margin: 0;
+                    padding: 1em;
+                        .form-control{
+                            display: inline;
+                        }
+                        label{
+                            margin: 0 1% 0 3%;
+                        }
+                        input{
+                            height: 2.5em;
+                            width: 1em;
+                            border-radius: 10px;
+                        }
+
+                        #descripcion{
+                            width: 25em;
+                        }
+
+                        #monto{
+                            width: 7em;
+                        }
+
+                        .selector{
+                            width: 10%;
+                            display: inline;
+                            border-radius: 10px;
+                        }
+
+                        br{
+                            display: none;
+                        }
+                    
+                }
+            }
+
+            .informacion{
+                margin: 1em;
+                #listaIngresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoIngreso{
+                        color: $blue;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-left: 2vw;
+                            border: 1px solid $blue; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0.5em;
+                                right: 0.7em;
+                            }
+                        }
+                        .divDato:hover{
+                            color: $xlightb;
+                            background-color: $blue;
+                            box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                        }
+                    }
+                }
+
+                #listaEgresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoEgreso{
+                        color: orangered;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-right: 2vw;
+                            border: 1px solid orangered; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                        }
+                        .divDato:hover{
+                            color: $xlightb;
+                            background-color: orangered;
+                            box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                        }
+                    }
+                }
+            }
+
+            #tituloIngresos{
+                padding: 1em;
+                color: $blue;
+            }
+
+            #tituloEgresos{
+                padding: 1em;
+                color: orangered;
+            }
+        }
+    }
+
+    @media (min-width: 1200px){
+        #cuerpo2{
+            #agregarNuevo{
+                background-color: $darkblue;
+                color: $xlightb;
+                width: 100%;
+                form{
+                    margin: 0;
+                    padding: 1em;
+                        .form-control{
+                            display: inline;
+                        }
+                        label{
+                            margin: 0 1% 0 3%;
+                        }
+                        input{
+                            height: 2.5em;
+                            width: 1em;
+                            border-radius: 10px;
+                        }
+
+                        #descripcion{
+                            width: 25em;
+                        }
+
+                        #monto{
+                            width: 7em;
+                        }
+
+                        .selector{
+                            width: 10%;
+                            display: inline;
+                            border-radius: 10px;
+                        }
+
+                        br{
+                            display: none;
+                        }
+                    
+                }
+            }
+
+            .informacion{
+                margin: 1em;
+                #listaIngresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoIngreso{
+                        color: $blue;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-left: 2vw;
+                            border: 1px solid $blue; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0.5em;
+                                right: 0.7em;
+                            }
+                        }
+                        .divDato:hover{
+                            color: $xlightb;
+                            background-color: $blue;
+                            box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                        }
+                    }
+                }
+
+                #listaEgresos{
+                    margin: 0;
+                    padding: 0;
+                    .datoEgreso{
+                        color: orangered;
+                        list-style: none;
+                        .divDato{
+                            width: 45vw;
+                            padding: 1em;
+                            margin-bottom: 1em;
+                            margin-right: 2vw;
+                            border: 1px solid orangered; 
+                            border-radius: 2em;
+                            box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
+                        }
+                        .divDato:hover{
+                            color: $xlightb;
+                            background-color: orangered;
+                            box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                        }
+                    }
+                }
+            }
+
+            #tituloIngresos{
+                padding: 1em;
+                color: $blue;
+            }
+
+            #tituloEgresos{
+                padding: 1em;
+                color: orangered;
+            }
+        }
+    }
+}

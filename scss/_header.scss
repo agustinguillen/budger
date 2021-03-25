@@ -1,0 +1,23 @@
+$darkblue: #154360;
+$blue: #2874A6;
+$lightblue: #85C1E9;
+$xlightb: #D6EAF8;
+$cyan: #1ABC9C;
+
+header{
+    background-color: $darkblue;
+    padding: 1em;
+    h1{
+        color: $xlightb;
+        font-family: Montserrat;
+        font-size: 2em;
+        text-shadow: 3px 3px 2px black;
+    }
+    h4{
+        color: $xlightb;
+        font-family: Montserrat;
+        font-style: italic;
+        font-size: 1em;
+        text-shadow: 1px 1px 2px black;
+    }
+}
