@@ -1,19 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,500;1,900&display=swap");
-header {
+body header {
   background-color: #154360;
-  padding: 1em; }
-  header h1 {
+  padding: 0.7em; }
+  body header h1 {
     color: #D6EAF8;
     font-family: Montserrat;
     font-size: 2em;
-    text-shadow: 3px 3px 2px black; }
-  header h4 {
+    text-shadow: 3px 3px 2px #2874A6; }
+  body header h4 {
     color: #D6EAF8;
     font-family: Montserrat;
     font-style: italic;
     font-size: 1em;
-    text-shadow: 1px 1px 2px black; }
+    text-shadow: 1px 1px 2px #2874A6; }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #85C1E9, #154360);
+  border-radius: 4px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #D6EAF8, #2874A6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2); }
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #D6EAF8; }
+
+::-webkit-scrollbar-track {
+  background: #D6EAF8;
+  border-radius: 4px; }
+
+::-webkit-scrollbar-track:hover, ::-webkit-scrollbar-track:active {
+  background: #D6EAF8; }
+
+::-moz-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-moz-scrollbar-thumb {
+  background: linear-gradient(45deg, #85C1E9, #154360);
+  border-radius: 4px; }
+
+::-moz-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #D6EAF8, #2874A6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2); }
+
+::-moz-scrollbar-thumb:active {
+  background-color: #D6EAF8; }
+
+::-moz-scrollbar-track {
+  background: #D6EAF8;
+  border-radius: 4px; }
+
+::-moz-scrollbar-track:hover, ::-webkit-scrollbar-track:active {
+  background: #D6EAF8; }
 
 body {
   background-color: #D6EAF8;
@@ -60,7 +104,7 @@ body {
           border: solid 1px #D6EAF8;
           border-radius: 15px;
           display: inline-block;
-          background-color: orangered;
+          background-color: #ff5719;
           margin-top: 10px;
           margin-bottom: 10px; }
           body #cuerpo1 #tablero #egresos small {
@@ -119,7 +163,7 @@ body {
           border: solid 1px #D6EAF8;
           border-radius: 15px;
           display: inline;
-          background-color: orangered; }
+          background-color: #ff5719; }
           body #cuerpo1 #tablero #egresos small {
             font-weight: lighter;
             font-size: 0.8em;
@@ -145,13 +189,13 @@ body {
         font-size: 1.2em; }
       body #cuerpo1 #presupuestoActual {
         color: #D6EAF8;
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: Montserrat;
         margin-bottom: 0;
         padding: 0; }
       body #cuerpo1 #tablero {
         font-size: 1em;
-        padding: 2em;
+        padding: 1em;
         margin-left: 20em;
         margin-right: 20em;
         height: 14em; }
@@ -191,7 +235,7 @@ body {
           border-radius: 15px;
           display: inline-block;
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
-          background-color: orangered; }
+          background-color: #ff7441; }
           body #cuerpo1 #tablero #egresos .montoSubtotales {
             display: block;
             margin: 0;
@@ -222,11 +266,11 @@ body {
         font-size: 1.2em; }
       body #cuerpo1 #presupuestoActual {
         color: #D6EAF8;
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: Montserrat; }
       body #cuerpo1 #tablero {
         font-size: 1em;
-        padding: 2em;
+        padding: 1em;
         margin-left: 23em;
         margin-right: 23em; }
         body #cuerpo1 #tablero #ingresos {
@@ -251,7 +295,7 @@ body {
           border: solid 1px #D6EAF8;
           border-radius: 15px;
           display: inline;
-          background-color: orangered; }
+          background-color: #ff5719; }
           body #cuerpo1 #tablero #egresos small {
             font-weight: lighter;
             font-size: 0.8em; }
@@ -264,39 +308,44 @@ body {
           padding: 0;
           color: #D6EAF8; } }
 
+::-webkit-scrollbar ::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #2874A6, #D6EAF8); }
+
 @media (max-width: 767.98px) and (min-width: 300px) {
-  body #cuerpo2 #agregarNuevo {
-    background-color: #154360;
-    color: #D6EAF8;
-    width: 100%; }
-    body #cuerpo2 #agregarNuevo .formulario {
-      margin: 0;
-      padding-top: 1em;
-      padding-bottom: 1em; }
-      body #cuerpo2 #agregarNuevo .formulario .form-control {
-        display: inline; }
-      body #cuerpo2 #agregarNuevo .formulario label {
-        margin: 0 1% 0 3%; }
-      body #cuerpo2 #agregarNuevo .formulario input {
-        height: 2.5em;
-        width: 1em;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo .formulario #descripcion {
-        width: 12em;
-        margin: 5px; }
-      body #cuerpo2 #agregarNuevo .formulario #monto {
-        width: 7em;
-        margin: 5px; }
-      body #cuerpo2 #agregarNuevo .formulario .selector {
-        width: 10em;
-        display: inline;
-        border-radius: 10px;
-        margin: 5px; }
-      body #cuerpo2 #agregarNuevo .formulario #cargar {
-        margin-left: 2em;
-        height: 2.7em; }
-      body #cuerpo2 #agregarNuevo .formulario .salto {
-        display: inline-block; }
+  body #cuerpo2 .divIngresar {
+    box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .divIngresar #agregarNuevo {
+      background-color: #154360;
+      color: #D6EAF8;
+      width: 100%; }
+      body #cuerpo2 .divIngresar #agregarNuevo .formulario {
+        margin: 0;
+        padding-top: 1em;
+        padding-bottom: 1em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
+          display: inline; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
+          margin: 0 1% 0 3%; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
+          height: 2.5em;
+          width: 1em;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
+          width: 12em;
+          margin: 5px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
+          width: 7em;
+          margin: 5px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
+          width: 10em;
+          display: inline;
+          border-radius: 10px;
+          margin: 5px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
+          margin-left: 2em;
+          height: 2.7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .salto {
+          display: inline-block; }
   body #cuerpo2 .informacion {
     margin: 0;
     padding: 0; }
@@ -323,14 +372,14 @@ body {
       margin: 0;
       padding: 0; }
       body #cuerpo2 .informacion #listaEgresos .datoEgreso {
-        color: orangered;
+        color: #ff5719;
         list-style: none; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
           width: 40vw;
           padding: 1em;
           margin-bottom: 1em;
           margin-right: 0;
-          border: 1px solid orangered;
+          border: 1px solid #ff5719;
           border-radius: 2em;
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
@@ -343,35 +392,40 @@ body {
     color: #2874A6; }
   body #cuerpo2 #tituloEgresos {
     padding: 1em;
-    color: orangered; } }
+    color: #ff5719; } }
 
 @media (max-width: 991.98px) and (min-width: 768px) {
-  body #cuerpo2 #agregarNuevo {
-    background-color: #154360;
-    color: #D6EAF8;
-    width: 100%; }
-    body #cuerpo2 #agregarNuevo form {
-      margin: 1em;
-      padding: 0; }
-      body #cuerpo2 #agregarNuevo form .form-control {
-        display: inline;
-        margin: 0.5em; }
-      body #cuerpo2 #agregarNuevo form label {
-        margin: 0 1% 0 3%; }
-      body #cuerpo2 #agregarNuevo form input {
-        height: 2.5em;
-        width: 1em;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form #descripcion {
-        width: 25em; }
-      body #cuerpo2 #agregarNuevo form #monto {
-        width: 7em; }
-      body #cuerpo2 #agregarNuevo form .selector {
-        width: 10%;
-        display: inline;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form .salto {
-        display: inline-block; }
+  body #cuerpo2 .divIngresar {
+    box-shadow: 2px 8px 12px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .divIngresar #agregarNuevo {
+      background-color: #154360;
+      color: #D6EAF8;
+      width: 100%; }
+      body #cuerpo2 .divIngresar #agregarNuevo .formulario {
+        margin: 1em;
+        padding: 0; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
+          display: inline;
+          margin: 0.5em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
+          margin: 0 1% 0 3%; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
+          height: 2.5em;
+          width: 1em;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
+          width: 25em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
+          width: 7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
+          width: 10%;
+          display: inline;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
+          margin-left: 2em;
+          height: 2.7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .salto {
+          display: inline-block; }
   body #cuerpo2 .informacion {
     margin: 1em; }
     body #cuerpo2 .informacion #listaIngresos {
@@ -396,53 +450,61 @@ body {
       margin: 0;
       padding: 0; }
       body #cuerpo2 .informacion #listaEgresos .datoEgreso {
-        color: orangered;
+        color: #ff5719;
         list-style: none; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
           width: 45vw;
           padding: 1em;
           margin-bottom: 1em;
           margin-right: 2vw;
-          border: 1px solid orangered;
+          border: 1px solid #ff5719;
           border-radius: 2em;
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
-          background-color: orangered;
+          background-color: #ff5719;
           box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
   body #cuerpo2 #tituloIngresos {
     padding: 1em;
     color: #2874A6; }
   body #cuerpo2 #tituloEgresos {
     padding: 1em;
-    color: orangered; } }
+    color: #ff5719; } }
 
 @media (max-width: 1199.98px) and (min-width: 992px) {
-  body #cuerpo2 #agregarNuevo {
-    background-color: #154360;
-    color: #D6EAF8;
-    width: 100%; }
-    body #cuerpo2 #agregarNuevo form {
-      margin: 0;
-      padding: 1em; }
-      body #cuerpo2 #agregarNuevo form .form-control {
-        display: inline; }
-      body #cuerpo2 #agregarNuevo form label {
-        margin: 0 1% 0 3%; }
-      body #cuerpo2 #agregarNuevo form input {
-        height: 2.5em;
-        width: 1em;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form #descripcion {
-        width: 25em; }
-      body #cuerpo2 #agregarNuevo form #monto {
-        width: 7em; }
-      body #cuerpo2 #agregarNuevo form .selector {
-        width: 10%;
-        display: inline;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form br {
-        display: none; }
+  body #cuerpo2 .divIngresar {
+    box-shadow: 2px 8px 15px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .divIngresar #agregarNuevo {
+      background-color: #154360;
+      color: #D6EAF8;
+      width: 100%; }
+      body #cuerpo2 .divIngresar #agregarNuevo .formulario {
+        display: flex;
+        margin: 0;
+        padding: 1em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
+          /*display: inline;*/
+          justify-content: space-between; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
+          margin: 0 1% 0 3%; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
+          height: 2.5em;
+          width: 1em;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
+          width: 25em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
+          width: 7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
+          width: 10%;
+          display: inline;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
+          margin-left: 4em;
+          margin-right: 3em;
+          height: 2.7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario br {
+          display: none; }
   body #cuerpo2 .informacion {
     margin: 1em; }
     body #cuerpo2 .informacion #listaIngresos {
@@ -472,53 +534,69 @@ body {
       margin: 0;
       padding: 0; }
       body #cuerpo2 .informacion #listaEgresos .datoEgreso {
-        color: orangered;
+        color: #ff5719;
         list-style: none; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
           width: 45vw;
           padding: 1em;
           margin-bottom: 1em;
           margin-right: 2vw;
-          border: 1px solid orangered;
+          border: 1px solid #ff5719;
           border-radius: 2em;
-          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
-          background-color: orangered;
+          background-color: #ff5719;
           box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
   body #cuerpo2 #tituloIngresos {
-    padding: 1em;
+    padding: 0.5em;
     color: #2874A6; }
   body #cuerpo2 #tituloEgresos {
-    padding: 1em;
-    color: orangered; } }
+    padding: 0.5em;
+    color: #ff5719; } }
 
 @media (min-width: 1200px) {
-  body #cuerpo2 #agregarNuevo {
-    background-color: #154360;
-    color: #D6EAF8;
-    width: 100%; }
-    body #cuerpo2 #agregarNuevo form {
-      margin: 0;
-      padding: 1em; }
-      body #cuerpo2 #agregarNuevo form .form-control {
-        display: inline; }
-      body #cuerpo2 #agregarNuevo form label {
-        margin: 0 1% 0 3%; }
-      body #cuerpo2 #agregarNuevo form input {
-        height: 2.5em;
-        width: 1em;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form #descripcion {
-        width: 25em; }
-      body #cuerpo2 #agregarNuevo form #monto {
-        width: 7em; }
-      body #cuerpo2 #agregarNuevo form .selector {
-        width: 10%;
-        display: inline;
-        border-radius: 10px; }
-      body #cuerpo2 #agregarNuevo form br {
-        display: none; }
+  body #cuerpo2 .divIngresar {
+    box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
+    body #cuerpo2 .divIngresar #agregarNuevo {
+      background-color: #154360;
+      color: #D6EAF8;
+      width: 100%; }
+      body #cuerpo2 .divIngresar #agregarNuevo .formulario {
+        margin: 0;
+        padding: 1em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
+          display: inline; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
+          margin: 0 1% 0 3%; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
+          height: 2.5em;
+          width: 1em;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
+          width: 25em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
+          width: 7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
+          width: 10%;
+          display: inline;
+          border-radius: 10px; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
+          margin-left: 4em;
+          margin-right: 3em;
+          height: 2.7em; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar:hover {
+          color: black;
+          background-color: white;
+          font-weight: 400;
+          box-shadow: 5px 5px 5px -5px #2874A6; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario br {
+          display: none; }
   body #cuerpo2 .informacion {
     margin: 1em; }
     body #cuerpo2 .informacion #listaIngresos {
@@ -548,23 +626,28 @@ body {
       margin: 0;
       padding: 0; }
       body #cuerpo2 .informacion #listaEgresos .datoEgreso {
-        color: orangered;
+        color: #ff5719;
         list-style: none; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
           width: 45vw;
           padding: 1em;
           margin-bottom: 1em;
           margin-right: 2vw;
-          border: 1px solid orangered;
+          border: 1px solid #ff5719;
           border-radius: 2em;
-          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            position: absolute;
+            top: 0.5em;
+            right: 0.7em; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
-          background-color: orangered;
+          background-color: #ff5719;
           box-shadow: 2px 8px 20px -4px rgba(0, 0, 0, 0.43); }
   body #cuerpo2 #tituloIngresos {
-    padding: 1em;
+    padding: 0.5em;
     color: #2874A6; }
   body #cuerpo2 #tituloEgresos {
-    padding: 1em;
-    color: orangered; } }
+    padding: 0.5em;
+    color: #ff5719; } }

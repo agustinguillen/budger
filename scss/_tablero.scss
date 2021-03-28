@@ -3,6 +3,7 @@ $blue: #2874A6;
 $lightblue: #85C1E9;
 $xlightb: #D6EAF8;
 $cyan: #16A085;
+$orange: rgb(255, 87, 25);
 
 body{
     background-color: $xlightb;
@@ -58,7 +59,7 @@ body{
 
                     #egresos{
                         @include subtotales();
-                        background-color: orangered;
+                        background-color: $orange;
                         margin-top:10px;
                         margin-bottom:10px;  
                     }
@@ -129,7 +130,7 @@ body{
 
                     #egresos{
                         @include subtotales();
-                        background-color: orangered;
+                        background-color: $orange;
                     }
 
                     .tituloSubtotales{
@@ -166,7 +167,7 @@ body{
 
                 #presupuestoActual{
                     color: $xlightb;
-                    font-size: 2em;
+                    font-size: 1.5em;
                     font-family: Montserrat;
                     margin-bottom: 0;
                     padding: 0;
@@ -174,7 +175,7 @@ body{
 
                 #tablero{
                     font-size: 1em;
-                    padding: 2em;
+                    padding: 1em;
                     margin-left: 20em;
                     margin-right: 20em;
                     height: 14em;
@@ -215,7 +216,7 @@ body{
 
                     #egresos{
                         @include subtotales();
-                        background-color: orangered;
+                        background-color: rgb(255, 116, 65);
                     }
 
                     .tituloSubtotales{
@@ -251,13 +252,13 @@ body{
 
                 #presupuestoActual{
                     color: $xlightb;
-                    font-size: 2em;
+                    font-size: 1.5em;
                     font-family: Montserrat;
                 }
 
                 #tablero{
                     font-size: 1em;
-                    padding: 2em;
+                    padding: 1em;
                     margin-left: 23em;
                     margin-right: 23em;
                     
@@ -283,7 +284,7 @@ body{
 
                     #egresos{
                         @include subtotales();
-                        background-color: orangered;
+                        background-color: $orange;
                     }
 
                     .tituloSubtotales{
@@ -299,9 +300,14 @@ body{
                         color: $xlightb;
                     }
                 }
-            }
-
-            
+            }  
         }
+    
+   
 }
 
+::-webkit-scrollbar{
+    ::-webkit-scrollbar-thumb{
+        background: linear-gradient(45deg, $blue, $xlightb);
+    }
+}
