@@ -365,8 +365,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            width: 10px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
     body #cuerpo2 .informacion #listaEgresos {
       margin: 0;
@@ -384,8 +385,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            width: 10px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
   body #cuerpo2 #tituloIngresos {
     padding: 1em;
@@ -404,62 +406,76 @@ body {
       body #cuerpo2 .divIngresar #agregarNuevo .formulario {
         margin: 1em;
         padding: 0; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
-          display: inline;
-          margin: 0.5em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
-          margin: 0 1% 0 3%; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
-          height: 2.5em;
-          width: 1em;
-          border-radius: 10px; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
-          width: 25em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
-          width: 7em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
-          width: 10%;
-          display: inline;
-          border-radius: 10px; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
-          margin-left: 2em;
-          height: 2.7em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario .salto {
-          display: inline-block; }
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container {
+          max-width: 600px;
+          margin: auto; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container .form-control {
+            display: inline;
+            margin: 0.5em; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container label {
+            margin: 0 1% 0 3%; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container input {
+            height: 2.5em;
+            width: 1em;
+            border-radius: 10px; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container #descripcion {
+            width: 25em; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container #monto {
+            width: 5em; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container .selector {
+            width: auto;
+            display: inline;
+            border-radius: 10px; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container #cargar {
+            margin-top: 2em;
+            margin-left: 2em;
+            height: 2.7em; }
+          body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-container .salto {
+            display: inline-block; }
   body #cuerpo2 .informacion {
-    margin: 1em; }
+    margin: auto; }
     body #cuerpo2 .informacion #listaIngresos {
       margin: 0;
+      margin-right: auto;
       padding: 0; }
       body #cuerpo2 .informacion #listaIngresos .datoIngreso {
         color: #2874A6;
         list-style: none; }
         body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato {
-          width: 45vw;
+          width: 40vw;
           padding: 1em;
           margin-bottom: 1em;
           margin-left: 2vw;
           border: 1px solid #2874A6;
           border-radius: 2em;
-          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
           body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            width: 10px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
     body #cuerpo2 .informacion #listaEgresos {
       margin: 0;
+      margin-left: 1em;
       padding: 0; }
       body #cuerpo2 .informacion #listaEgresos .datoEgreso {
         color: #ff5719;
         list-style: none; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato {
-          width: 45vw;
+          width: 40vw;
           padding: 1em;
           margin-bottom: 1em;
-          margin-right: 2vw;
+          margin-right: auto;
           border: 1px solid #ff5719;
           border-radius: 2em;
-          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43); }
+          box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
+          position: relative; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            width: 10px;
+            position: absolute;
+            top: 0.7em;
+            right: 0.7em; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
           background-color: #ff5719;
@@ -523,8 +539,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            width: 15px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
         body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
           color: #D6EAF8;
@@ -546,8 +563,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            width: 15px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
@@ -615,8 +633,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img {
+            width: 10px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
         body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
           color: #D6EAF8;
@@ -638,8 +657,9 @@ body {
           box-shadow: 1px 6px 15px -4px rgba(0, 0, 0, 0.43);
           position: relative; }
           body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img {
+            width: 10px;
             position: absolute;
-            top: 0.5em;
+            top: 0.7em;
             right: 0.7em; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
