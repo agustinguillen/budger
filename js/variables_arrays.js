@@ -10,13 +10,15 @@ let sumaIngresos=0;
 let sumaEgresos=0;
 let nuevoDescripcion;
 let nuevoMonto=0;
+let db;
 const divDato = document.getElementsByClassName("divDato");
-const ingresos = [];
-const egresos = [];
+let ingresos = [];
+let egresos = [];
+let valoresIngresos;
+let valoresEgresos;
 
 
-console.log(ingresos);
-console.log(egresos);
+
 
 
 

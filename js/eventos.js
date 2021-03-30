@@ -20,3 +20,11 @@ document.body.onkeydown = function(e) {
     }       
 };
 
+//Cargar datos almacenados al cargar la pantalla
+window.onload = function (){
+    obtenerArraysInit();
+    init();
+    calcularPorcentaje();
+    calcularPresupuesto();
+}
+
