@@ -1,30 +1,32 @@
 //Click en botón de cargar dato
-botonCargar.onclick= function(){
-    nuevo(descripcion1.value, monto1.value);
+botonCargar.click(function(){
+    nuevo(descripcion1.val(), monto1.val());
     cargar();
     calcularPorcentaje();
     calcularPresupuesto(); 
-    descripcion1.value="";
-    monto1.value=0;
-}
+    descripcion1.val("");
+    monto1.val(0);
+});
 
 //Enter para cargar dato
-document.body.onkeydown = function(e) {
+$('body').on('keydown', function(e) {
     if (e.keyCode == 13){
-        nuevo(descripcion1.value, monto1.value);
+        nuevo(descripcion1.val(), monto1.val());
         cargar();
         calcularPorcentaje();
         calcularPresupuesto(); 
-        descripcion1.value="";
-        monto1.value=0;
+        descripcion1.val("");
+        monto1.val(0);
     }       
-};
+});
 
 //Cargar datos almacenados al cargar la pantalla
-window.onload = function (){
+$(document).ready(function (){
     obtenerArraysInit();
     init();
     calcularPorcentaje();
     calcularPresupuesto();
-}
+    descripcion1.val("");
+    monto1.val(0);
+})
 

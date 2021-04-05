@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,500;1,900&display=swap");
 body header {
+  display: flex;
   background-color: #154360;
-  padding: 0.7em; }
+  padding: 0.7em;
+  align-items: center;
+  flex-direction: column; }
   body header h1 {
     color: #D6EAF8;
     font-family: Montserrat;
@@ -68,18 +71,19 @@ body {
       background: #2874a6;
       background: linear-gradient(90deg, #2874a6 0%, #85c1e9 100%); }
       body #cuerpo1 h3 {
-        padding: 1em;
+        padding: 0.8em;
         padding-bottom: 0;
         color: #D6EAF8;
         font-family: Montserrat;
-        font-size: 1.2em; }
+        font-size: 1em; }
       body #cuerpo1 #presupuestoActual {
         color: #D6EAF8;
-        font-size: 2em;
-        font-family: Montserrat; }
+        font-size: 1.2em;
+        font-family: Montserrat;
+        margin: 0; }
       body #cuerpo1 #tablero {
         font-size: 1em;
-        padding: 1em;
+        padding: 0.5em;
         margin-left: 3em;
         margin-right: 3em; }
         body #cuerpo1 #tablero #ingresos {
@@ -325,22 +329,26 @@ body {
         body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
           display: inline; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
-          margin: 0 1% 0 3%; }
+          margin: 0; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
           height: 2.5em;
           width: 1em;
-          border-radius: 10px; }
+          border-radius: 10px;
+          margin-bottom: 1em; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
           width: 12em;
-          margin: 5px; }
+          margin: 5px;
+          margin-bottom: 1em; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
           width: 7em;
-          margin: 5px; }
+          margin: 5px;
+          margin-bottom: 1em; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
           width: 10em;
           display: inline;
           border-radius: 10px;
-          margin: 5px; }
+          margin: 5px;
+          margin-bottom: 1em; }
         body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
           margin-left: 2em;
           height: 2.7em; }
@@ -498,28 +506,28 @@ body {
         display: flex;
         margin: 0;
         padding: 1em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-control {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item .form-control {
           /*display: inline;*/
           justify-content: space-between; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario label {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item label {
           margin: 0 1% 0 3%; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario input {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item input {
           height: 2.5em;
           width: 1em;
           border-radius: 10px; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #descripcion {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item #descripcion {
           width: 25em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #monto {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item #monto {
           width: 7em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario .selector {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item .selector {
           width: 10%;
           display: inline;
           border-radius: 10px; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario #cargar {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item #cargar {
           margin-left: 4em;
           margin-right: 3em;
           height: 2.7em; }
-        body #cuerpo2 .divIngresar #agregarNuevo .formulario br {
+        body #cuerpo2 .divIngresar #agregarNuevo .formulario .form-item br {
           display: none; }
   body #cuerpo2 .informacion {
     margin: 1em; }
@@ -543,6 +551,8 @@ body {
             position: absolute;
             top: 0.7em;
             right: 0.7em; }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img:hover {
+            cursor: pointer; }
         body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
           color: #D6EAF8;
           background-color: #2874A6;
@@ -567,6 +577,8 @@ body {
             position: absolute;
             top: 0.7em;
             right: 0.7em; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img:hover {
+            cursor: pointer; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
           background-color: #ff5719;
@@ -637,6 +649,8 @@ body {
             position: absolute;
             top: 0.7em;
             right: 0.7em; }
+          body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato img:hover {
+            cursor: pointer; }
         body #cuerpo2 .informacion #listaIngresos .datoIngreso .divDato:hover {
           color: #D6EAF8;
           background-color: #2874A6;
@@ -661,6 +675,8 @@ body {
             position: absolute;
             top: 0.7em;
             right: 0.7em; }
+          body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato img:hover {
+            cursor: pointer; }
         body #cuerpo2 .informacion #listaEgresos .datoEgreso .divDato:hover {
           color: #D6EAF8;
           background-color: #ff5719;

@@ -16,22 +16,23 @@ body{
                 background: rgb(40,116,166);
                 background: linear-gradient(90deg, rgba(40,116,166,1) 0%, rgba(133,193,233,1) 100%);
                 h3{
-                    padding: 1em;
+                    padding: 0.8em;
                     padding-bottom: 0;
                     color: $xlightb;
                     font-family: Montserrat;
-                    font-size: 1.2em;
+                    font-size: 1em;
                 }
 
                 #presupuestoActual{
                     color: $xlightb;
-                    font-size: 2em;
+                    font-size: 1.2em;
                     font-family: Montserrat;
+                    margin: 0;
                 }
 
                 #tablero{
                     font-size: 1em;
-                    padding: 1em;
+                    padding: 0.5em;
                     margin-left: 3em;
                     margin-right: 3em;
                     
