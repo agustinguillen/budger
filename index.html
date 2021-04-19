@@ -10,10 +10,16 @@
     <title>BUDGER</title>
 </head>
 <body>
+    <div id="presentacion">
+        <div class="d-flex flex-column">
+            <h1 class="text-center">BUDGER</h1>
+            <img id="monedas" class="align-self-center" src="assets/img/money.png" alt="Ilustración de dinero">
+        </div>
+    </div>
+    
     <header>
-        <h1 class="text-center">BUDGER</h1>
-        <h4 class="text-center">Sacale el mayor provecho a tus finanzas</h2>
-        <!--agregar iconos redes sociales-->
+        <h1 class="text-center" id="brand">BUDGER</h1>
+
     </header>
     <div class="container-fluid align-items-center" id="cuerpo1">
         <h3 class="text-center">Presupuesto disponible:</h3>
@@ -35,7 +41,7 @@
     <div class="container-fluid" id="cuerpo2">
         <div class="row divIngresar">
             <div id="agregarNuevo">
-                <form class="form-inline text-center formulario" id="formulario">
+                <form class="form text-center formulario" id="formulario">
                     <div class="form-container">
                         <label for="tipoDeValor" class="form-label tipo">Seleccione:</label>
                             <select name="tipoDeValor" id="seleccion" class="form-control selector">
@@ -69,8 +75,84 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <h3 class="text-center">Cambio de Divisas</h3>
+                            </div>
+                        </div>
+                        <div class="form-container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm">
+                                    <select class="form-control form-select" aria-label="Default select example" id="moneda1">
+                                        <option selected>Seleccione una moneda</option>
+                                        <option value="ARS">ARS - Peso Argentino</option>
+                                        <option value="BOB">BOB - Boliviano</option>
+                                        <option value="BRL">BRL - Real Brasileño</option>
+                                        <option value="BTC">BTC - Bitcoin</option>
+                                        <option value="CAD">CAD - Dolar Canadiense</option>
+                                        <option value="CHF">CHF - Franco Suizo</option>
+                                        <option value="CLP">CLP - Peso Chileno</option>
+                                        <option value="COP">COP - Peso Colombiano</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Libra Esterlina Gran Bretaña</option>
+                                        <option value="INR">INR - Rupia India</option>
+                                        <option value="JPY">JPY - Yen Japonés</option>
+                                        <option value="MXN">MXN - Peso Mexicano</option>
+                                        <option value="USD">USD - Dolar Estadounidense</option>
+                                        <option value="UYU">UYU - Peso Uruguayo</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm">
+                                    <input class="form-control form-input" id="input-moneda1" type="number" placeholder="Ingrese un monto">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm">
+                                    <select class="form-control form-select" aria-label="Default select example" id="moneda2">
+                                        <option selected>Seleccione una moneda</option>
+                                        <option value="ARS">ARS - Peso Argentino</option>
+                                        <option value="BOB">BOB - Boliviano</option>
+                                        <option value="BRL">BRL - Real Brasileño</option>
+                                        <option value="BTC">BTC - Bitcoin</option>
+                                        <option value="CAD">CAD - Dolar Canadiense</option>
+                                        <option value="CHF">CHF - Franco Suizo</option>
+                                        <option value="CLP">CLP - Peso Chileno</option>
+                                        <option value="COP">COP - Peso Colombiano</option>
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="GBP">GBP - Libra Esterlina Gran Bretaña</option>
+                                        <option value="INR">INR - Rupia India</option>
+                                        <option value="JPY">JPY - Yen Japonés</option>
+                                        <option value="MXN">MXN - Peso Mexicano</option>
+                                        <option value="USD">USD - Dolar Estadounidense</option>
+                                        <option value="UYU">UYU - Peso Uruguayo</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm">
+                                    <input class="form-control form-input" id="input-moneda2" type="number" placeholder="Resultado">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg col-md col-sm text-center mt-3">
+                                    <button type="button" class="btn btn-dark" id="calcularCambio">Calcular</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    
     <script src="js/clases.js"></script>
     <script src="js/variables_arrays.js"></script>
+    <script src="js/servicio.js"></script>
     <script src="js/funciones.js"></script>
     <script src="js/eventos.js"></script>
 </body>

@@ -1,30 +1,81 @@
 $darkblue: #154360;
 $blue: #2874A6;
-$lightblue: #85C1E9;
+$lightblue: #6CF5EC;
 $xlightb: #D6EAF8;
 $cyan: #16A085;
 $orange: rgb(255, 87, 25);
 
 body{
     background-color: $xlightb;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+    #presentacion {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        h1{
+            color: $darkblue;
+            font-family: Montserrat;
+            text-shadow: 3px 3px 2px $blue;
+            font-weight: bold;
+        }
+      
+        #monedas{
+            filter: drop-shadow(3px 3px 2px $blue);
+        }
+      }
+
+    header{
+        display: none;
+    }
+
+    #cuerpo1{
+        display: none;
+        
+        #ingresos{
+            opacity: 0;
+        }
+    
+        #egresos{
+            opacity: 0;
+        }
+    }
+
+    #cuerpo2{
+        display: none;
+    }
+
    
 
-    @media (min-width: 300px){
+    @media (min-width: 100px){
+
+        #presentacion{
+            h1{
+                font-size: 3em;
+            }
+            #monedas{
+                width: 40vw;
+            }
+        }
+
         #cuerpo1{
                 background: rgb(40,116,166);
-                background: linear-gradient(90deg, rgba(40,116,166,1) 0%, rgba(133,193,233,1) 100%);
+                background: linear-gradient(270deg, #16b5d1 0%, rgba(133,193,233,1) 100%);
                 h3{
                     padding: 0.8em;
                     padding-bottom: 0;
-                    color: $xlightb;
+                    color: $darkblue;
                     font-family: Montserrat;
                     font-size: 1em;
                 }
 
                 #presupuestoActual{
-                    color: $xlightb;
+                    color: $darkblue;
                     font-size: 1.2em;
                     font-family: Montserrat;
                     margin: 0;
@@ -40,7 +91,7 @@ body{
                         padding: 0;
                         color: $xlightb;
                         font-weight: bold;
-                        border: solid 1px $xlightb;
+                        /*border: solid 1px $xlightb;*/
                         border-radius: 15px;
                         display: inline-block;
                         small{
@@ -53,14 +104,16 @@ body{
 
                     #ingresos{
                         @include subtotales();
-                        background-color: $blue;
+                        background-color: rgba(0,0,0,0.43);
+                        padding: 10px;
                         margin-top:10px; 
                         margin-bottom:10px;   
                     }
 
                     #egresos{
                         @include subtotales();
-                        background-color: $orange;
+                        background-color: rgba(0,0,0,0.43);
+                        padding: 10px;
                         margin-top:10px;
                         margin-bottom:10px;  
                     }
@@ -69,14 +122,6 @@ body{
                         display: inline;
 
                     }
-
-                    .subtotales{
-                        display: inline;
-                        margin: 1em;
-                        margin-top: 0;
-                        padding: 0;
-                        color: $xlightb;
-                    }
                 }
             }
             
@@ -84,9 +129,20 @@ body{
 
 
     @media (min-width: 768px){
+
+            #presentacion{
+                h1{
+                    font-size: 5em;
+                }
+              
+                #monedas{
+                    width: 30vw;
+                }
+            }
+
             #cuerpo1{
                 background: rgb(40,116,166);
-                background: linear-gradient(90deg, rgba(40,116,166,1) 0%, rgba(133,193,233,1) 100%);
+                background: linear-gradient(270deg, #16b5d1 0%, rgba(133,193,233,1) 100%);
                 h3{
                     padding: 1em;
                     padding-bottom: 0;
@@ -113,7 +169,7 @@ body{
                         padding: 0.3em;
                         color: $xlightb;
                         font-weight: bold;
-                        border: solid 1px $xlightb;
+                        /*border: solid 1px $xlightb;*/
                         border-radius: 15px;
                         display: inline;
                         small{
@@ -126,12 +182,12 @@ body{
 
                     #ingresos{
                         @include subtotales();
-                        background-color: $blue;  
+                        background-color: rgba(0,0,0,0.43);  
                     }
 
                     #egresos{
                         @include subtotales();
-                        background-color: $orange;
+                        background-color: rgba(0,0,0,0.43);
                     }
 
                     .tituloSubtotales{
@@ -139,13 +195,7 @@ body{
 
                     }
 
-                    .subtotales{
-                        display: inline;
-                        margin: 1em;
-                        margin-top: 0;
-                        padding: 0;
-                        color: $xlightb;
-                    }
+                    
                 }
             }
 
@@ -155,9 +205,20 @@ body{
 
 
     @media (min-width: 992px){
+
+        #presentacion{
+            h1{
+                font-size: 7em;
+            }
+          
+            #monedas{
+                width: 30vw;
+            }
+        }
+
             #cuerpo1{
                 background: rgb(40,116,166);
-                background: linear-gradient(90deg, rgba(40,116,166,1) 0%, rgba(133,193,233,1) 100%);
+                background: linear-gradient(270deg, #16b5d1 0%, rgba(133,193,233,1) 100%);
                 h3{
                     padding: 0.5em;
                     padding-bottom: 0;
@@ -190,7 +251,7 @@ body{
                         padding: 0.5em;
                         color: $xlightb;
                         font-weight: bold;
-                        border: solid 1px $xlightb;
+                        /*border: solid 1px $xlightb;*/
                         border-radius: 15px;
                         display: inline-block;
                         box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
@@ -211,26 +272,18 @@ body{
 
                     #ingresos{
                         @include subtotales();
-                        background-color: $blue;  
+                        background-color: rgba(0,0,0,0.43); 
                         
                     }
 
                     #egresos{
                         @include subtotales();
-                        background-color: rgb(255, 116, 65);
+                        background-color:rgba(0,0,0,0.43);
                     }
 
                     .tituloSubtotales{
                         display: inline;
                         margin: 1em;
-                    }
-
-                    .subtotales{
-                        display: inline-block;
-                        margin: 7em;
-                        margin-top: 0;
-                        padding: 0;
-                        color: $xlightb;
                     }
 
                 }
@@ -240,19 +293,31 @@ body{
         }
 
     @media (min-width: 1200px){
+
+            #presentacion{
+                h1{
+                    font-size: 5em;
+                }
+            
+                #monedas{
+                    width: 20vw;
+                }
+            }
+
+
             #cuerpo1{
                 background: rgb(40,116,166);
-                background: linear-gradient(90deg, rgba(40,116,166,1) 0%, rgba(133,193,233,1) 100%);
+                background: linear-gradient(270deg, #16b5d1 0%, rgba(133,193,233,1) 100%);
                 h3{
                     padding: 1em;
                     padding-bottom: 0;
-                    color: $xlightb;
+                    color: $darkblue;
                     font-family: Montserrat;
                     font-size: 1.2em;
                 }
 
                 #presupuestoActual{
-                    color: $xlightb;
+                    color: $darkblue;
                     font-size: 1.5em;
                     font-family: Montserrat;
                 }
@@ -269,7 +334,7 @@ body{
                         padding: 0.3em;
                         color: $xlightb;
                         font-weight: bold;
-                        border: solid 1px $xlightb;
+                        /*border: solid 1px $xlightb;*/
                         border-radius: 15px;
                         display: inline;
                         small{
@@ -280,25 +345,17 @@ body{
 
                     #ingresos{
                         @include subtotales();
-                        background-color: $blue;  
+                        background-color: rgba(0,0,0,0.3);
                     }
 
                     #egresos{
                         @include subtotales();
-                        background-color: $orange;
+                        background-color: rgba(0,0,0,0.3);
                     }
 
                     .tituloSubtotales{
                         display: inline;
 
-                    }
-
-                    .subtotales{
-                        display: inline;
-                        margin: 1em;
-                        margin-top: 0;
-                        padding: 0;
-                        color: $xlightb;
                     }
                 }
             }  

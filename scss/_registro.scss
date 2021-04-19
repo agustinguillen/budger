@@ -1,60 +1,76 @@
 body{
-    @media (max-width: 767.98px)and(min-width: 300px){
+    @media (max-width: 767.99px){
         #cuerpo2{
+            overflow-x: hidden;
             .divIngresar{
                 box-shadow: 2px 8px 20px -4px rgba(0,0,0,0.43);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 #agregarNuevo{
                     background-color: $darkblue;
                     color: $xlightb;
                     width: 100%;
+                    padding: 0;
                     .formulario{
                         margin: 0;
-                        padding-top: 1em;
-                        padding-bottom: 1em;
+                        padding: 0;
+                        .form-container{
+                            padding-top: 5vh;
+                            padding-bottom: 5vh;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
                             .form-control{
                                 display: inline;
                                 
                             }
                             label{
                                 margin: 0;
+                                display: block;
                                 
                             }
                             input{
-                                height: 2.5em;
-                                width: 1em;
+                                height: 50px;
+                                width: 70vw;
                                 border-radius: 10px;
-                                margin-bottom: 1em;
+                                margin-bottom: 0.5em;
                             }
 
                             #descripcion{
-                                width: 12em;
-                                margin: 5px;
-                                margin-bottom: 1em;
+                                height: 50px;
+                                width: 70vw;
+                                margin: 0;
+                                margin-bottom: 0.5em;
                             }
 
                             #monto{
-                                width: 7em;
-                                margin: 5px;
+                                height: 50px;
+                                width: 70vw;
+                                margin: 0;
                                 margin-bottom: 1em;
                             }
 
                             .selector{
-                                width: 10em;
+                                height: 50px;
+                                width: 70vw;
                                 display: inline;
                                 border-radius: 10px;
-                                margin: 5px;
-                                margin-bottom: 1em;
+                                margin: 0;
+                                margin-bottom: 0.5em;
                             }
 
                             #cargar{
-                                margin-left: 2em;
+                                
                                 height: 2.7em;
                             }
 
                             .salto{
                                 display: inline-block;
                             }
-                        
+                        }
                     }
                 }
             }
@@ -77,11 +93,18 @@ body{
                                 border-radius: 2em;
                                 box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
                                 position: relative;
+                                strong{
+                                    display: block;
+                                }
                                 img{
                                     width: 10px;
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;
+                                    opacity: 0.5;
+                                }
+                                .salto-datos{
+                                    display: none;
                                 }
                             }
                         }
@@ -102,11 +125,18 @@ body{
                                 border-radius: 2em;
                                 box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
                                 position: relative;
+                                strong{
+                                    display: block;
+                                }
                                 img{
                                     width: 10px;
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;
+                                    opacity: 0.5;
+                                }
+                                .salto-datos{
+                                    display: none;
                                 }
                                 
                             }
@@ -127,7 +157,7 @@ body{
         }
     }
 
-    @media (max-width:991.98px)and(min-width: 768px){
+    @media (max-width:991.99px)and(min-width: 768px){
         #cuerpo2{
             .divIngresar{
                 box-shadow: 2px 8px 12px -4px rgba(0,0,0,0.43);
@@ -136,46 +166,43 @@ body{
                     color: $xlightb;
                     width: 100%;
                     .formulario{
-                        margin: 1em;
-                        padding: 0;
-                        .form-container{
-                            max-width: 600px;
-                            margin: auto;
+                        margin: 0;
+                        padding: 2em 15em 2em 15em;
+                        .form-item{
                             .form-control{
-                                display: inline;
-                                margin: 0.5em;
+                                max-width: 350px;
                             }
                             label{
                                 margin: 0 1% 0 3%;
                             }
                             input{
                                 height: 2.5em;
-                                width: 1em;
+                                width: 70vw;
                                 border-radius: 10px;
                             }
 
                             #descripcion{
-                                width: 25em;
+                                width: 70vw;
                             }
 
                             #monto{
-                                width: 5em;
+                                width: 70vw;
                             }
 
                             .selector{
-                                width: auto;
+                                width: 70vw;
                                 display: inline;
                                 border-radius: 10px;
                             }
 
                             #cargar{
-                                margin-top: 2em;
-                                margin-left: 2em;
+                                margin-left: 4em;
+                                margin-right: 3em;
                                 height: 2.7em;
                             }
 
-                            .salto{
-                                display: inline-block;
+                            br{
+                                display: none;
                             }
                         }
                     }
@@ -205,6 +232,7 @@ body{
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;
+                                    opacity: 0.5;
                                 }
                             }
                         }
@@ -231,6 +259,7 @@ body{
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;
+                                    opacity: 0.5;
                                 }
                             }
                             .divDato:hover{
@@ -255,8 +284,9 @@ body{
         }
     }
 
-    @media (max-width:1199.98px)and(min-width: 992px){
+    @media (max-width:1199.99px)and(min-width: 992px){
         #cuerpo2{
+            padding: 0;
             .divIngresar{
                 box-shadow: 2px 8px 15px -4px rgba(0,0,0,0.43);
                 #agregarNuevo{
@@ -264,13 +294,11 @@ body{
                     color: $xlightb;
                     width: 100%;
                     .formulario{
-                        display: flex;
                         margin: 0;
-                        padding: 1em;
+                        padding: 2em 15em 2em 15em;
                         .form-item{
                             .form-control{
-                                /*display: inline;*/
-                                justify-content: space-between;
+                                max-width: 350px;
                             }
                             label{
                                 margin: 0 1% 0 3%;
@@ -282,11 +310,11 @@ body{
                             }
 
                             #descripcion{
-                                width: 25em;
+                                width: 2em;
                             }
 
                             #monto{
-                                width: 7em;
+                                width: 2em;
                             }
 
                             .selector{
@@ -310,7 +338,7 @@ body{
             }
 
                 .informacion{
-                    margin: 1em;
+                    margin: 0.5em;
                     #listaIngresos{
                         margin: 0;
                         padding: 0;
@@ -320,17 +348,20 @@ body{
                             .divDato{
                                 width: 45vw;
                                 padding: 1em;
+                                padding-left: 3em;
                                 margin-bottom: 1em;
-                                margin-left: 2vw;
+                                margin-left: 0;
                                 border: 1px solid $blue; 
                                 border-radius: 2em;
                                 box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
                                 position: relative;
+                              
                                 img{
                                     width: 15px;
                                     position: absolute;
                                     top: 0.7em;
-                                    right: 0.7em;  
+                                    right: 0.7em;
+                                    opacity: 0.5;  
                                 }
                                 img:hover{
                                     cursor: pointer;
@@ -353,6 +384,7 @@ body{
                             .divDato{
                                 width: 45vw;
                                 padding: 1em;
+                                padding-left: 3em;
                                 margin-bottom: 1em;
                                 margin-right: 2vw;
                                 border: 1px solid $orange; 
@@ -363,7 +395,8 @@ body{
                                     width: 15px;
                                     position: absolute;
                                     top: 0.7em;
-                                    right: 0.7em;  
+                                    right: 0.7em; 
+                                    opacity: 0.5; 
                                 }
                                 img:hover{
                                     cursor: pointer;
@@ -401,7 +434,9 @@ body{
                     width: 100%;
                     .formulario{
                         margin: 0;
-                        padding: 1em;
+                        padding: 0.4em;
+                        padding-top: 2em;
+                        padding-bottom: 2em;
                             .form-control{
                                 display: inline;
                             }
@@ -429,7 +464,7 @@ body{
                             }
 
                             #cargar{
-                                margin-left: 4em;
+                                margin-left: 2em;
                                 margin-right: 3em;
                                 height: 2.7em;
                             }
@@ -460,17 +495,20 @@ body{
                             .divDato{
                                 width: 45vw;
                                 padding: 1em;
+                                padding-left: 3em;
                                 margin-bottom: 1em;
                                 margin-left: 2vw;
                                 border: 1px solid $blue; 
                                 border-radius: 2em;
                                 box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
                                 position: relative;
+                                max-width: 600px;
                                 img{
                                     width: 10px;
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;  
+                                    opacity: 0.5;
                                 }
                                 img:hover{
                                     cursor: pointer;
@@ -493,17 +531,20 @@ body{
                             .divDato{
                                 width: 45vw;
                                 padding: 1em;
+                                padding-left: 3em;
                                 margin-bottom: 1em;
                                 margin-right: 2vw;
                                 border: 1px solid $orange; 
                                 border-radius: 2em;
                                 box-shadow: 1px 6px 15px -4px rgba(0,0,0,0.43);
                                 position: relative;
+                                max-width: 600px;
                                 img{
                                     width: 10px;
                                     position: absolute;
                                     top: 0.7em;
                                     right: 0.7em;  
+                                    opacity: 0.5;
                                 }
                                 img:hover{
                                     cursor: pointer;

@@ -1,13 +1,41 @@
+$( document ).ready(function() {
+    $('#presentacion').fadeIn('slow')
+    setTimeout(function(){
+        $('#presentacion').fadeOut('slow');
+    }, 1500);
+
+    setTimeout(function(){
+        $('header').slideDown();
+        
+        $('#cuerpo1').slideDown(1500);
+        
+
+        setTimeout(function(){
+            
+            $('#ingresos').animate({opacity:1})
+        }, 500);
+        
+        setTimeout(function(){
+            $('#egresos').animate({opacity:1})
+        }, 850)
+        $('#cuerpo2').slideDown(2000);
+        $('footer').fadeIn(3000);
+    }, 2000);
+})
+
+
 //Crear objetos de clases Ingresos & Egresos
-function nuevo(descripcion, monto){
+function nuevo(descripcion, monto, fecha){
     nuevoDescripcion = descripcion;
     nuevoMonto = parseFloat(monto);
+    let fechaDato= `${String(fecha.getDate()).padStart(2, '0')}/${String(fecha.getMonth() + 1).padStart(2, '0')}/${fecha.getFullYear()}`
+
     if(seleccion.val()==="ingreso" && descripcion1.val() != "" && nuevoMonto !== 0 && isNaN(nuevoMonto)===false){
         id = parseInt(ingresos.length + 1);
-        ingresos.push(new Ingreso(id, nuevoDescripcion, nuevoMonto));}
+        ingresos.push(new Ingreso(id, nuevoDescripcion, nuevoMonto, fechaDato));}
     if(seleccion.val()==="egreso" && descripcion1.val() != "" && nuevoMonto !== 0 && isNaN(nuevoMonto)===false){
         id = parseInt(egresos.length + 1);
-        egresos.push(new Egreso(id, nuevoDescripcion, nuevoMonto));}
+        egresos.push(new Egreso(id, nuevoDescripcion, nuevoMonto, fechaDato));}
     guardar();
 }
 
@@ -15,25 +43,26 @@ function nuevo(descripcion, monto){
 function cargar(){
     valoresIngresos = ingresos.map(ingreso => ingreso.monto);
     valoresEgresos = egresos.map(egreso => egreso.monto);
+    let validacionIngresos = ((seleccion.val() === "ingreso") && (descripcion1.val() != "") && (monto1.val() != 0) && (isNaN(monto1.val())===false));
+    let validacionEgresos = ((seleccion.val() === "egreso") && (descripcion1.val() != "") && (monto1.val() != 0) && (isNaN(monto1.val())===false));
     
 
-    if(((seleccion.val() === "ingreso") && (descripcion1.val() != "") && (monto1.val() != 0) && (isNaN(monto1.val())===false))){
+    if( validacionIngresos ){
         //Cálculo subtotal de ingresos
         sumaIngresos = parseInt(0);
         let tarjetaIngreso = $('<li></li>');
         tarjetaIngreso.attr("class", "col-6 datoIngreso");
-        hoy = `${dd}/${mm}/${yyyy}`
         for(let i = 0; i<ingresos.length; i++){
             sumaIngresos += valoresIngresos[i];
             if(ingresos[i].monto !== 0 && isNaN(ingresos[i].monto)===false){
-                tarjetaIngreso.html(`<div class="divDato" id="divIngreso${ingresos[i].id}"><strong>Descripción: </strong>${ingresos[i].descripcion}<br><strong>Monto: </strong> $${parseFloat(ingresos[i].monto).toFixed(2)}<br><strong>Fecha: </strong>${hoy}<a class="borrar" onclick='eliminar(${ingresos[i] instanceof Ingreso}, ${ingresos[i].id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`);
+                tarjetaIngreso.hide().html(`<div class="divDato" id="divIngreso${ingresos[i].id}"><strong>Descripción: </strong><br class="salto-datos">${ingresos[i].descripcion}<br><strong>Monto: </strong><br class="salto-datos"> $${parseFloat(ingresos[i].monto).toFixed(2)}<br><strong>Fecha: </strong><br class="salto-datos">${dd}/${mm}/${yyyy}<a class="borrar" onclick='eliminar(${ingresos[i] instanceof Ingreso}, ${ingresos[i].id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`).fadeIn();
                 listaIngresos.append(tarjetaIngreso);
             }
         }
         $('#subtotalIngresos').html(`$ ${parseFloat(sumaIngresos).toFixed(2)}`);
         return sumaIngresos
 
-    }else if (((seleccion.val() === "egreso") && (descripcion1.val() != "") && (monto1.val() != 0) && (isNaN(monto1.val())===false))){
+    }else if ( validacionEgresos ){
         //Cálculo subtotal de egresos
         sumaEgresos = parseInt(0);
         let tarjetaEgreso = $('<li></li>');
@@ -41,7 +70,7 @@ function cargar(){
         for(let i = 0; i<egresos.length; i++){
             sumaEgresos += valoresEgresos[i];
             if(egresos[i].monto !== 0 && isNaN(egresos[i].monto)===false){
-                tarjetaEgreso.html(`<div class="divDato" id="divEgreso${egresos[i].id}"><strong>Descripción: </strong>${egresos[i].descripcion}<br><strong>Monto: </strong> $${parseFloat(egresos[i].monto).toFixed(2)} <a class="borrar" onclick='eliminar(${egresos[i] instanceof Ingreso}, ${egresos[i].id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`);
+                tarjetaEgreso.hide().html(`<div class="divDato" id="divEgreso${egresos[i].id}"><strong>Descripción: </strong><br class="salto-datos">${egresos[i].descripcion}<br><strong>Monto: </strong><br class="salto-datos"> $${parseFloat(egresos[i].monto).toFixed(2)} <br><strong>Fecha: </strong><br class="salto-datos">${dd}/${mm}/${yyyy}<a class="borrar" onclick='eliminar(${egresos[i] instanceof Ingreso}, ${egresos[i].id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`).fadeIn();
                 listaEgresos.append(tarjetaEgreso);
                 }
         }
@@ -96,11 +125,12 @@ function eliminar(dato, id){
 function eliminarHTML(dato, id){
     if(dato === true){
         let divEliminar = $(`#divIngreso${id}`).closest('.divDato');
-        divEliminar.remove();
+        divEliminar.fadeOut();
+        divEliminar.fadeOut(300, function(){divEliminar.remove()});
     }
     else if(dato === false){
         let divEliminar = $(`#divEgreso${id}`).closest('.divDato');
-        divEliminar.remove();
+        divEliminar.fadeOut(300, function(){divEliminar.remove()});   
     }
 }
 
@@ -118,14 +148,14 @@ function obtenerArraysInit (){
     let ingresosGuardados = JSON.parse(localStorage.getItem("ingresosGuardados")); 
     if(ingresosGuardados !== null){
         for(const ingresoGuardado of ingresosGuardados){
-            ingresos.push(new Ingreso(ingresoGuardado.id, ingresoGuardado.descripcion, ingresoGuardado.monto))
+            ingresos.push(new Ingreso(ingresoGuardado.id, ingresoGuardado.descripcion, ingresoGuardado.monto, ingresoGuardado.fecha))
         } 
     }
     //egresos
     let egresosGuardados = JSON.parse(localStorage.getItem("egresosGuardados"));
     if(egresosGuardados !== null){
         for(const egresoGuardado of egresosGuardados){
-            egresos.push(new Egreso(egresoGuardado.id, egresoGuardado.descripcion, egresoGuardado.monto))
+            egresos.push(new Egreso(egresoGuardado.id, egresoGuardado.descripcion, egresoGuardado.monto, egresoGuardado.fecha))
         }
     }
 
@@ -144,11 +174,14 @@ function init(){
         tarjetaIngreso.attr("class", "col-6 datoIngreso");
         sumaIngresos += valoresIngresos[ingresos.indexOf(ingreso)];
         if(ingreso.monto !== 0 && isNaN(ingreso.monto)===false){
-            tarjetaIngreso.html(`<div class="divDato" id="divIngreso${ingreso.id}"><strong>Descripción: </strong>${ingreso.descripcion}<br><strong>Monto: </strong> $${parseFloat(ingreso.monto).toFixed(2)}<a class="borrar" onclick='eliminar(true, ${ingreso.id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`);
-            listaIngresos.append(tarjetaIngreso);
+            setTimeout(function(){
+                tarjetaIngreso.hide().html(`<div class="divDato" id="divIngreso${ingreso.id}"><strong>Descripción: </strong><br class="salto-datos">${ingreso.descripcion}<br><strong>Monto: </strong><br class="salto-datos"> $${parseFloat(ingreso.monto).toFixed(2)}<br><strong>Fecha: </strong><br class="salto-datos">${ingreso.fecha}<a class="borrar" onclick='eliminar(true, ${ingreso.id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`).fadeIn();
+                listaIngresos.append(tarjetaIngreso);
+            }, 750)
         }
     }
     $('#subtotalIngresos').html(`$ ${parseFloat(sumaIngresos).toFixed(2)}`);
+    
     //egresos
     sumaEgresos = parseInt(0);
     for(const egreso of egresos){
@@ -156,12 +189,16 @@ function init(){
         tarjetaEgreso.attr("class", "col-6 datoEgreso");
         sumaEgresos += valoresEgresos[egresos.indexOf(egreso)];
         if(egreso.monto !== 0 && isNaN(egreso.monto)===false){
-                tarjetaEgreso.html(`<div class="divDato" id="divEgreso${egreso.id}"><strong>Descripción: </strong>${egreso.descripcion}<br><strong>Monto: </strong> $${parseFloat(egreso.monto).toFixed(2)}<a class="borrar" onclick='eliminar(false, ${egreso.id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`);
-                listaEgresos.append(tarjetaEgreso);
+            setTimeout(function(){
+                tarjetaEgreso.hide().html(`<div class="divDato" id="divEgreso${egreso.id}"><strong>Descripción: </strong><br class="salto-datos">${egreso.descripcion}<br><strong>Monto: </strong><br class="salto-datos"> $${parseFloat(egreso.monto).toFixed(2)}<br><strong>Fecha: </strong><br class="salto-datos">${egreso.fecha}<a class="borrar" onclick='eliminar(false, ${egreso.id})'><img src="assets/img/cerrar.png" style="float: right;" class="iconoCerrar"></a></div>`).fadeIn();
+                listaEgresos.append(tarjetaEgreso);  
+            }, 750)
         }
     }
     $('#subtotalEgresos').html(`$ ${parseFloat(sumaEgresos).toFixed(2)}`);
 }
+
+
 
 
 

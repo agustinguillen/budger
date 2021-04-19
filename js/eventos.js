@@ -1,6 +1,6 @@
 //Click en botón de cargar dato
 botonCargar.click(function(){
-    nuevo(descripcion1.val(), monto1.val());
+    nuevo(descripcion1.val(), monto1.val(), hoy);
     cargar();
     calcularPorcentaje();
     calcularPresupuesto(); 
@@ -11,7 +11,7 @@ botonCargar.click(function(){
 //Enter para cargar dato
 $('body').on('keydown', function(e) {
     if (e.keyCode == 13){
-        nuevo(descripcion1.val(), monto1.val());
+        nuevo(descripcion1.val(), monto1.val(), hoy);
         cargar();
         calcularPorcentaje();
         calcularPresupuesto(); 
@@ -29,4 +29,8 @@ $(document).ready(function (){
     descripcion1.val("");
     monto1.val(0);
 })
+
+$('#calcularCambio').click( function(){
+    apiExchange();
+} );
 

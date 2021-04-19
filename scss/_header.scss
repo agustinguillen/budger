@@ -15,34 +15,28 @@ body{
         h1{
             color: $xlightb;
             font-family: Montserrat;
-            font-size: 2em;
+            font-size: 2.5em;
             text-shadow: 3px 3px 2px $blue;
-        }
-        h4{
-            color: $xlightb;
-            font-family: Montserrat;
-            font-style: italic;
-            font-size: 1em;
-            text-shadow: 1px 1px 2px $blue;
         }
     }
 }
 
 ::-webkit-scrollbar {
     width: 8px;   
-    height: 8px;    
+    height: 8px;   
+    overflow: auto; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, $lightblue, $darkblue);
+    background: $darkblue;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, $xlightb, $blue);
+    background: $blue;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color: $xlightb;
+    background-color: $blue;
 }
 ::-webkit-scrollbar-track {
     background: $xlightb;
@@ -55,7 +49,8 @@ body{
 
 ::-moz-scrollbar {
     width: 8px;   
-    height: 8px;    
+    height: 8px;
+    overflow: auto;    
 }
 
 ::-moz-scrollbar-thumb {
